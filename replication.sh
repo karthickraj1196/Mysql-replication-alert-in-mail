@@ -10,7 +10,7 @@ SQL_status=$(grep -E "Slave_SQL_Running:" file.txt | cut -d: -f2)
 
 if [ $IO_status == No ] || [ $SQL_status == No ];then
 
-echo "Replication is failed" | mail -s "Replication Status-SCI-sysconfig" -r qaserver@solartis.com pushparajkarthick_d@solartis.com
+echo "Replication is failed" | mail -s "Replication Status" -r qaserver@solartis.com pushparajkarthick_d@solartis.com
 
 else
 echo "Running Successfully"
